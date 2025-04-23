@@ -1,0 +1,3 @@
+Please update the 'options', 'correct_answer' 'explanation' field of the following json block according to the 'python_output', which always shows the correct numerical answer. If none of the options is the correct answer, please make necessary changes to the existing options, update the existing option list and the 'correct_answer' without appending a new option in the option list. Please avoid mentioning the python codes in the explanation. Please output in JSON format.
+
+{mcq_blk}

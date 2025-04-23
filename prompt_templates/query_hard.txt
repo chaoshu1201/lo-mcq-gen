@@ -1,0 +1,65 @@
+This file is the lecture note of one lesson in the {module_name} module.
+
+0. Please extract the lesson title from the first page of the lecture notes and write it in the "lesson_name" field in the JSON output.
+
+1. Please briefly summarise the content (including examples and exercises) covered in the lecture notes.
+
+2. Please list possible Learning Outcomes (LOs) based on the content covered in the lecture notes. When writing LOs, please use Revised Bloom's Taxonomy (2001) and select the appropriate level for each LO based on the content and examples in the lecture note.
+
+3. For each generated learning outcome, please set one Multiple Choice Question (MCQ) with 4 options starting with A/B/C/D and provide solutions for it. The difficulty level of the MCQ should match the level of the learning outcome. 
+
+4. If there is an example about a concept in the lecture notes, please design an MCQ to reinforce understanding and application of the concept, even though the MCQ format may not be the most suitable format for a question like the example. However, please avoid replicating the example in the lecture notes directly.
+
+5. For conceptual questions, please give students several statements and ensure the distractor options are not easy to differentiate from the correct answer.
+
+6. If a question corresponds to a LO at the Applying, Analyzing, Evaluating, or Creating level, it should NOT be too straightforward. Please ensure the question requires students to reason through multiple steps and apply concepts in a new and authentic scenario.
+
+7. If possible, please author at least one LO at the Creating level and design a corresponding question that requires students to think creatively and apply their knowledge to solve a problem in a scenario in reality.
+
+8. In each MCQ solution, please provide helpful explanations about the methods and steps used to achieve the answer based on the lecture notes, but please avoid simply giving the answer and mentioning calculation details and avoid mentioning the python codes. Please also provide the related pages on which the solution is based in the lecture notes. 
+
+9. If the solution to a question requires calculations, please generate Python codes and run the codes to solve the MCQ, and provide the correct answer option based on the execution result. Please return only the numerical result of the calculation and print the output of the code as a string, so that it can be in an appropriate format for an option. Please indicate whether the correct answer is obtained by prediction or code execution in the "correct answer obtained by" field in the JSON output. Please record the Python program and its execution result in the output file.
+
+10. Please make sure each LO corresponds to an MCQ at the declared level.
+
+11. After you complete the MCQ generation, please review the generated content and complete the checklist in the "check_list" field in the JSON output.
+  - Record whether you listed a LO at the Creating level based on the lecture notes
+  - Record whether you designed MCQ questions corresponding to all the examples in the lecture notes
+  - Record whether you executed the python codes to obtain the correct answer for each MCQ. If not, please go back and run the codes to obtain the correct answer and update the MCQ accordingly.
+
+Please provide your response in the following JSON format:
+
+{{
+  "module_name": "{module_name}",
+  "lesson_name": "Lesson title extracted from the first page of the lecture notes",
+  "summary": "A brief summary of the lecture content",
+  "learning_outcomes": [
+    {{
+      "level": "Bloom's Taxonomy level (e.g., Remembering/Understanding/Applying/Analyzing/Evaluating/Creating)",
+      "description": "Description of the learning outcome"
+    }},
+    // ... more learning outcomes ...
+  ],
+  "mcqs": [
+    {{
+      "question": "The question stem",
+      "options": ["A", "B", "C", "D"],
+      "correct_answer": "The correct option (A, B, C, or D)",
+      "explanation": "Explanation of the correct answer and why other options are incorrect",
+      "related_pages": "Page numbers or sections related to this question (if applicable)",
+      "python_code": "A short Python code snippet related to the question (if applicable). Do NOT use triple quotes to wrap the codes.",
+      "python_output": "Execution output of the Python codes related to the question (if applicable)",
+      "correct answer obtained by": "prediction or code execution"
+    }},
+    // ... more MCQs ...
+  ]
+  "check_list":
+    {{
+      "lo and mcq at Creating level included?": "True or False. Explain why only when the answer is False",
+      "Every example in the lecture notes corresponds to an MCQ?": "True or False. Explain why only when the answer is False",
+      "All python codes were executed to obtain the correct answers?": "True or False. Explain why only when the answer is False"
+    }}
+}}
+
+Remember to tailor your response specifically to the content of the {module_name} lecture notes provided.
+

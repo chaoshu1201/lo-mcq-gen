@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ipynb_checkpoints
+
+# vs code
+.vscode/
+
+# Virtual environments
+.venv
+
+# API keys
+.env
+
+# System-generated files
+.DS_Store
+Thumbs.db
+
+# Generation related files
+input/
+output/
+log/
